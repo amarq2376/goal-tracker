@@ -12,7 +12,8 @@ import FirebaseFirestore
 let db = Firestore.firestore()
 
 struct ContentView: View {
-    @State private var note = ""
+    @State private var note1 = ""
+    @State private var note2 = ""
     @State private var newFriend = ""
     
     var body: some View {
@@ -56,11 +57,15 @@ struct ContentView: View {
                     }
                     HStack() {
                         TextField("",
-                                  text: $note,
+                                  text: $note1,
                                   prompt: Text("Send encouragement!")
                                             .foregroundColor(.blue)
                         )
                         .textFieldStyle(.roundedBorder)
+                        Button {
+                        } label: {
+                            Image(systemName: "smiley")
+                        }
                     }
                 }
                 .padding()
@@ -100,11 +105,15 @@ struct ContentView: View {
                     }
                     HStack() {
                         TextField("",
-                                  text: $note,
+                                  text: $note2,
                                   prompt: Text("Send encouragement!")
                                             .foregroundColor(.blue)
                         )
                         .textFieldStyle(.roundedBorder)
+                        Button {
+                        } label: {
+                            Image(systemName: "smiley")
+                        }
                     }
                 }
                 .padding()

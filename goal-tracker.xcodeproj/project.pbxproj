@@ -36,6 +36,7 @@
 		0EEB9C262B9B78EF008857F3 = {
 			isa = PBXGroup;
 			children = (
+				0EEB9C402B9B7D42008857F3 /* README.md */,
 				0EEB9C312B9B78EF008857F3 /* goal-tracker */,
 				0EEB9C302B9B78EF008857F3 /* Products */,
 			);
@@ -56,7 +57,6 @@
 				0EEB9C342B9B78EF008857F3 /* ContentView.swift */,
 				0EEB9C362B9B78F1008857F3 /* Assets.xcassets */,
 				0EEB9C382B9B78F1008857F3 /* Preview Content */,
-				0EEB9C402B9B7D42008857F3 /* README.md */,
 			);
 			path = "goal-tracker";
 			sourceTree = "<group>";

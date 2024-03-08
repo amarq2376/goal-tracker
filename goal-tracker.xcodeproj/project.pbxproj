@@ -11,7 +11,6 @@
 		0EEB9C352B9B78EF008857F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEB9C342B9B78EF008857F3 /* ContentView.swift */; };
 		0EEB9C372B9B78F1008857F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EEB9C362B9B78F1008857F3 /* Assets.xcassets */; };
 		0EEB9C3A2B9B78F1008857F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EEB9C392B9B78F1008857F3 /* Preview Assets.xcassets */; };
-		0EEB9C422B9B8159008857F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EEB9C412B9B8159008857F3 /* GoogleService-Info.plist */; };
 		0EEB9C452B9B81D4008857F3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0EEB9C442B9B81D4008857F3 /* FirebaseAnalytics */; };
 		0EEB9C472B9B81D4008857F3 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 0EEB9C462B9B81D4008857F3 /* FirebaseAnalyticsOnDeviceConversion */; };
 		0EEB9C492B9B81D4008857F3 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0EEB9C482B9B81D4008857F3 /* FirebaseAnalyticsSwift */; };
@@ -48,7 +47,6 @@
 		0EEB9C362B9B78F1008857F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EEB9C392B9B78F1008857F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0EEB9C402B9B7D42008857F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		0EEB9C412B9B8159008857F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +90,6 @@
 		0EEB9C262B9B78EF008857F3 = {
 			isa = PBXGroup;
 			children = (
-				0EEB9C412B9B8159008857F3 /* GoogleService-Info.plist */,
 				0EEB9C402B9B7D42008857F3 /* README.md */,
 				0EEB9C312B9B78EF008857F3 /* goal-tracker */,
 				0EEB9C302B9B78EF008857F3 /* Products */,
@@ -218,7 +215,6 @@
 			files = (
 				0EEB9C3A2B9B78F1008857F3 /* Preview Assets.xcassets in Resources */,
 				0EEB9C372B9B78F1008857F3 /* Assets.xcassets in Resources */,
-				0EEB9C422B9B8159008857F3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -38,6 +38,7 @@
 		0EEB9C752B9B81D4008857F3 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0EEB9C742B9B81D4008857F3 /* FirebaseRemoteConfigSwift */; };
 		0EEB9C772B9B81D4008857F3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0EEB9C762B9B81D4008857F3 /* FirebaseStorage */; };
 		0EEB9C792B9B81D4008857F3 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 0EEB9C782B9B81D4008857F3 /* FirebaseStorageCombine-Community */; };
+		0EEB9C802B9BBC14008857F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EEB9C7F2B9BBC14008857F3 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		0EEB9C392B9B78F1008857F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0EEB9C402B9B7D42008857F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0EEB9C7C2B9B960F008857F3 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		0EEB9C7F2B9BBC14008857F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		0EEB9C262B9B78EF008857F3 = {
 			isa = PBXGroup;
 			children = (
+				0EEB9C7F2B9BBC14008857F3 /* GoogleService-Info.plist */,
 				0EEB9C7C2B9B960F008857F3 /* .gitignore */,
 				0EEB9C402B9B7D42008857F3 /* README.md */,
 				0EEB9C312B9B78EF008857F3 /* goal-tracker */,
@@ -217,6 +220,7 @@
 			files = (
 				0EEB9C3A2B9B78F1008857F3 /* Preview Assets.xcassets in Resources */,
 				0EEB9C372B9B78F1008857F3 /* Assets.xcassets in Resources */,
+				0EEB9C802B9BBC14008857F3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

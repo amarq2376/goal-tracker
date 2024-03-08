@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import Foundation
+import FirebaseCore
+import FirebaseFirestore
+let db = Firestore.firestore()
 
 struct ContentView: View {
     @State private var note = ""
+    @State private var newFriend = ""
     
     var body: some View {
         VStack() {
@@ -111,8 +116,18 @@ struct ContentView: View {
         }
         Spacer()
         
+        TextField("",
+                  text: $newFriend,
+                  prompt: Text("Enter name")
+                            .foregroundColor(.blue)
+        )
+        .textFieldStyle(.roundedBorder)
+        
+        
         Button("Add Friend") {
-            print("Button tapped!")
+            
+            db.collection("community").document("community_list").updateData(["com_list" : FieldValue.arrayUnion([newFriend])])
+            print("Friend Added!")
         }
         .buttonStyle(.bordered)
         

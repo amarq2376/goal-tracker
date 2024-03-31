@@ -65,6 +65,12 @@ struct ContentView: View {
                         )
                         .textFieldStyle(.roundedBorder)
                         Button {
+                            // From and To are currently hardcoded
+                            let from = "Alex"
+                            let to = "John"
+                            let body = note1
+                            db.collection("community").document("community_message").updateData(["messages" : FieldValue.arrayUnion([["From" : from, "To" : to, "Body" : body]])])
+                            print("Message Added!")
                         } label: {
                             Image(systemName: "smiley")
                         }
@@ -113,6 +119,13 @@ struct ContentView: View {
                         )
                         .textFieldStyle(.roundedBorder)
                         Button {
+                            // From and To are hardcoded, need to change them at some point
+                            let from = "Alex"
+                            let to = "Mary"
+                            let body = note2
+                            db.collection("community").document("community_message").updateData(["messages" : FieldValue.arrayUnion([["From" : from, "To" : to, "Body" : body]])])
+                            print("Message Added!")
+                            
                         } label: {
                             Image(systemName: "smiley")
                         }

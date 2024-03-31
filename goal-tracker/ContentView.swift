@@ -12,6 +12,8 @@ import FirebaseFirestore
 let db = Firestore.firestore()
 
 struct ContentView: View {
+    @State private var selectedTab: Tab = .person
+    
     @State private var note1 = ""
     @State private var note2 = ""
     @State private var newFriend = ""
@@ -123,22 +125,28 @@ struct ContentView: View {
             
 
         }
-        Spacer()
-        
-        TextField("",
-                  text: $newFriend,
-                  prompt: Text("Enter name")
-                            .foregroundColor(.blue)
-        )
-        .textFieldStyle(.roundedBorder)
-        
-        
-        Button("Add Friend") {
+
+        HStack() {
+            TextField("",
+                      text: $newFriend,
+                      prompt: Text("Enter name")
+                                .foregroundColor(.blue)
+            )
+            .textFieldStyle(.roundedBorder)
             
-            db.collection("community").document("community_list").updateData(["com_list" : FieldValue.arrayUnion([newFriend])])
-            print("Friend Added!")
+            
+            Button("Add Friend") {
+                
+                db.collection("community").document("community_list").updateData(["com_list" : FieldValue.arrayUnion([newFriend])])
+                print("Friend Added!")
+            }
+            .buttonStyle(.bordered)
         }
-        .buttonStyle(.bordered)
+        .padding()
+        TabView(selectedTab: $selectedTab)
+        
+    
+        
         
         
     }

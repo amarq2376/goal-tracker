@@ -1,0 +1,13 @@
+{
+    "Simulator Target Bundle": "money-masters.goal-tracker",
+    "aps" : {
+       "alert" : {
+            "title" : "Message From Alex Marquez",
+            "body" : "Keep up the great work!"
+        },
+        "sound" : "default",
+        "badge" : 10,
+   },
+    "duration": "Current time",
+    "startedAt": "Meeting’s starting time"
+}

@@ -11,24 +11,33 @@ import FirebaseFirestore
 import FirebaseAuth
 
 class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+    let startTime = Date()
     func registerForNotifications() {
         UNUserNotificationCenter.current()
-                    .requestAuthorization(options: [.alert, .sound, .badge]) {
-                        granted, error in
-                        print("Permission granted: \(granted)")
-        }
+            .requestAuthorization(options: [.alert, .sound, .badge]) {
+                granted, error in
+                print("Permission granted: \(granted)")
+            }
+    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.banner, .sound])
     }
     
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-            completionHandler([.banner, .sound])
-        }
-    
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-    registerForNotifications()
-    return true
-  }
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        //    let providerFactory = AppCheckDebugProviderFactory()
+        //    AppCheck.setAppCheckProviderFactory(providerFactory)
+        FirebaseApp.configure()
+        registerForNotifications()
+        return true
+    }
+    func applicationWillTerminate(_ application: UIApplication) {
+        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        let endTime = Date().timeIntervalSince(startTime)
+        print("This is the time interval of opening the app to closing the app in seconds:")
+        print(endTime)
+    }
 }
 
 @main

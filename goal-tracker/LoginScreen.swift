@@ -44,7 +44,7 @@ struct LoginScreen : View {
                 .textFieldStyle(.roundedBorder)
                 .padding()
  
-                NavigationLink(destination: ContentView(), label: { Text("Login") })
+                NavigationLink(destination: Goal(), label: { Text("Login") })
                 
             }
         }

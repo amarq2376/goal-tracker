@@ -19,149 +19,148 @@ struct ContentView: View {
     @State private var newFriend = ""
     
     var body: some View {
-        VStack() {
-            Text("Community")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding()
-            ScrollView {
-                VStack(spacing: 0.1) {
-                    Label("John", systemImage: "person")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.black)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    VStack() {
+            VStack() {
+                Text("Community")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+                ScrollView {
+                    VStack(spacing: 0.1) {
+                        Label("John", systemImage: "person")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(.black)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         VStack() {
-                            Text("Goal")
-                                .font(.headline)
-                                .frame(maxWidth: .infinity, alignment: .center)
-                            Text("Buy coffee 3 times in a week")
-                                .frame(maxWidth: .infinity, alignment: .center)
+                            VStack() {
+                                Text("Goal")
+                                    .font(.headline)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                                Text("Buy coffee 3 times in a week")
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                            }
+                            HStack() {
+                                VStack() {
+                                    Text("Status")
+                                        .font(.headline)
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                    Text("1 coffee left")
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                }
+                                VStack() {
+                                    Text("Time Remaining")
+                                        .font(.headline)
+                                    Text("3 days")
+                                        .foregroundStyle(.red)
+                                }
+                            }
+                            .padding()
                         }
                         HStack() {
-                          VStack() {
-                              Text("Status")
-                                  .font(.headline)
-                                  .frame(maxWidth: .infinity, alignment: .center)
-                              Text("1 coffee left")
-                                  .frame(maxWidth: .infinity, alignment: .center)
-                          }
-                            VStack() {
-                                Text("Time Remaining")
-                                    .font(.headline)
-                                Text("3 days")
-                                    .foregroundStyle(.red)
-                            }
-                        }
-                        .padding()
-                    }
-                    HStack() {
-                        TextField("",
-                                  text: $note1,
-                                  prompt: Text("Send encouragement!")
-                                            .foregroundColor(.blue)
-                        )
-                        .textFieldStyle(.roundedBorder)
-                        Button {
-                            // From and To are currently hardcoded
-                            let from = "Alex"
-                            let to = "John"
-                            let body = note1
-                            db.collection("community").document("community_message").updateData(["messages" : FieldValue.arrayUnion([["From" : from, "To" : to, "Body" : body]])])
-                            print("Message Added!")
-                        } label: {
-                            Image(systemName: "smiley")
-                        }
-                    }
-                }
-                .padding()
-                .border(Color.black)
-                .padding()
-                
-                VStack(spacing: 0.1) {
-                    Label("Mary", systemImage: "person")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.black)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    VStack() {
-                        VStack() {
-                            Text("Goal")
-                                .font(.headline)
-                                .frame(maxWidth: .infinity, alignment: .center)
-                            Text("Order clothes twice this month")
-                                .frame(maxWidth: .infinity, alignment: .center)
-                        }
-                        HStack() {
-                          VStack() {
-                              Text("Status")
-                                  .font(.headline)
-                                  .frame(maxWidth: .infinity, alignment: .center)
-                              Text("0/2 orders")
-                                  .frame(maxWidth: .infinity, alignment: .center)
-                          }
-                            VStack() {
-                                Text("Time Remaining")
-                                    .font(.headline)
-                                Text("30 days")
-                                    .foregroundStyle(.black)
-                            }
-                        }
-                        .padding()
-                    }
-                    HStack() {
-                        TextField("",
-                                  text: $note2,
-                                  prompt: Text("Send encouragement!")
-                                            .foregroundColor(.blue)
-                        )
-                        .textFieldStyle(.roundedBorder)
-                        Button {
-                            // From and To are hardcoded, need to change them at some point
-                            let from = "Alex"
-                            let to = "Mary"
-                            let body = note2
-                            db.collection("community").document("community_message").updateData(["messages" : FieldValue.arrayUnion([["From" : from, "To" : to, "Body" : body]])])
-                            print("Message Added!")
-                            
-                        } label: {
-                            Image(systemName: "smiley")
-                        }
-                    }
-                }
-                .padding()
-                .border(Color.black)
-                .padding()
-            }
-            
-
-        }
-
-        HStack() {
-            TextField("",
-                      text: $newFriend,
-                      prompt: Text("Enter name")
+                            TextField("",
+                                      text: $note1,
+                                      prompt: Text("Send encouragement!")
                                 .foregroundColor(.blue)
-            )
-            .textFieldStyle(.roundedBorder)
-            
-            
-            Button("Add Friend") {
+                            )
+                            .textFieldStyle(.roundedBorder)
+                            Button {
+                                // From and To are currently hardcoded
+                                let from = "Alex"
+                                let to = "John"
+                                let body = note1
+                                db.collection("community").document("community_message").updateData(["messages" : FieldValue.arrayUnion([["From" : from, "To" : to, "Body" : body]])])
+                                print("Message Added!")
+                            } label: {
+                                Image(systemName: "smiley")
+                            }
+                        }
+                    }
+                    .padding()
+                    .border(Color.black)
+                    .padding()
+                    
+                    VStack(spacing: 0.1) {
+                        Label("Mary", systemImage: "person")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(.black)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        VStack() {
+                            VStack() {
+                                Text("Goal")
+                                    .font(.headline)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                                Text("Order clothes twice this month")
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                            }
+                            HStack() {
+                                VStack() {
+                                    Text("Status")
+                                        .font(.headline)
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                    Text("0/2 orders")
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                }
+                                VStack() {
+                                    Text("Time Remaining")
+                                        .font(.headline)
+                                    Text("30 days")
+                                        .foregroundStyle(.black)
+                                }
+                            }
+                            .padding()
+                        }
+                        HStack() {
+                            TextField("",
+                                      text: $note2,
+                                      prompt: Text("Send encouragement!")
+                                .foregroundColor(.blue)
+                            )
+                            .textFieldStyle(.roundedBorder)
+                            Button {
+                                // From and To are hardcoded, need to change them at some point
+                                let from = "Alex"
+                                let to = "Mary"
+                                let body = note2
+                                db.collection("community").document("community_message").updateData(["messages" : FieldValue.arrayUnion([["From" : from, "To" : to, "Body" : body]])])
+                                print("Message Added!")
+                                
+                            } label: {
+                                Image(systemName: "smiley")
+                            }
+                        }
+                    }
+                    .padding()
+                    .border(Color.black)
+                    .padding()
+                }
                 
-                db.collection("community").document("community_list").updateData(["com_list" : FieldValue.arrayUnion([newFriend])])
-                print("Friend Added!")
+                
             }
-            .buttonStyle(.bordered)
-        }
-        .padding()
+            
+            HStack() {
+                TextField("",
+                          text: $newFriend,
+                          prompt: Text("Enter name")
+                    .foregroundColor(.blue)
+                )
+                .textFieldStyle(.roundedBorder)
+                
+                
+                Button("Add Friend") {
+                    
+                    db.collection("community").document("community_list").updateData(["com_list" : FieldValue.arrayUnion([newFriend])])
+                    print("Friend Added!")
+                }
+                .buttonStyle(.bordered)
+            }
+            .padding()
+        
+
+        
         TabView(selectedTab: $selectedTab)
-        
-    
-        
-        
-        
+       
     }
 }
 

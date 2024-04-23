@@ -8,10 +8,9 @@
 import SwiftUI
 
 enum Tab: String, CaseIterable {
-   case house
-   case clipboard
+    case house
     case person
-   case message
+    case message
 }
 
 struct TabView: View {
@@ -21,27 +20,30 @@ struct TabView: View {
    }
     
     var body: some View {
-        VStack {
-            
-           HStack {
-             ForEach(Tab.allCases, id: \.rawValue) { tab in
-                 Spacer()
-                 Image(systemName: selectedTab == tab ? fillImage : tab.rawValue)
-                     .onTapGesture {
-                          withAnimation(.easeIn(duration: 0.1)){
-                              selectedTab = tab
-                          }
-                     }
-                 Spacer()
-               }
-            }
-            
-            .frame(minWidth: 100, maxWidth: .infinity, minHeight: 50, maxHeight: 100)
-            .background(.thinMaterial)
-            .cornerRadius(10)
-            
-       }
-        .ignoresSafeArea()
+
+            VStack {
+                
+               HStack {
+                 ForEach(Tab.allCases, id: \.rawValue) { tab in
+                     Spacer()
+                     Image(systemName: selectedTab == tab ? fillImage : tab.rawValue)
+                         .onTapGesture {
+                              withAnimation(.easeIn(duration: 0.1)){
+                                  selectedTab = tab
+                              }
+                             
+                         }
+                
+                     Spacer()
+                   }
+                }
+                
+                .frame(minWidth: 100, maxWidth: .infinity, minHeight: 50, maxHeight: 100)
+                .background(.thinMaterial)
+                .cornerRadius(10)
+                
+           }
+            .ignoresSafeArea()
     }
 }
 

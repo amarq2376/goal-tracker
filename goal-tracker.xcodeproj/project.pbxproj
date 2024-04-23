@@ -43,6 +43,10 @@
 		BAEA1DB02BB9DDBB00D983C9 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA1DAF2BB9DDBB00D983C9 /* TabView.swift */; };
 		BAEA1DB22BB9E35800D983C9 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA1DB12BB9E35800D983C9 /* MessagesView.swift */; };
 		BAF6CE742BD74B5E002E7BDD /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6CE732BD74B5E002E7BDD /* LoginScreen.swift */; };
+		BAF6CE762BD80E7E002E7BDD /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6CE752BD80E7E002E7BDD /* GoalsView.swift */; };
+		BAF6CE782BD81363002E7BDD /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6CE772BD81363002E7BDD /* GoalView.swift */; };
+		BAF6CE7A2BD8138B002E7BDD /* AddGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6CE792BD8138B002E7BDD /* AddGoalView.swift */; };
+		BAF6CE7C2BD81623002E7BDD /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6CE7B2BD81623002E7BDD /* Goal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +62,10 @@
 		BAEA1DAF2BB9DDBB00D983C9 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		BAEA1DB12BB9E35800D983C9 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		BAF6CE732BD74B5E002E7BDD /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		BAF6CE752BD80E7E002E7BDD /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		BAF6CE772BD81363002E7BDD /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		BAF6CE792BD8138B002E7BDD /* AddGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalView.swift; sourceTree = "<group>"; };
+		BAF6CE7B2BD81623002E7BDD /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,10 @@
 				BAEA1DAF2BB9DDBB00D983C9 /* TabView.swift */,
 				BAEA1DB12BB9E35800D983C9 /* MessagesView.swift */,
 				BAF6CE732BD74B5E002E7BDD /* LoginScreen.swift */,
+				BAF6CE752BD80E7E002E7BDD /* GoalsView.swift */,
+				BAF6CE772BD81363002E7BDD /* GoalView.swift */,
+				BAF6CE792BD8138B002E7BDD /* AddGoalView.swift */,
+				BAF6CE7B2BD81623002E7BDD /* Goal.swift */,
 			);
 			path = "goal-tracker";
 			sourceTree = "<group>";
@@ -247,7 +259,11 @@
 				BAEA1DB22BB9E35800D983C9 /* MessagesView.swift in Sources */,
 				0EEB9C352B9B78EF008857F3 /* ContentView.swift in Sources */,
 				BAEA1DB02BB9DDBB00D983C9 /* TabView.swift in Sources */,
+				BAF6CE7A2BD8138B002E7BDD /* AddGoalView.swift in Sources */,
+				BAF6CE762BD80E7E002E7BDD /* GoalsView.swift in Sources */,
 				0EEB9C332B9B78EF008857F3 /* goal_trackerApp.swift in Sources */,
+				BAF6CE782BD81363002E7BDD /* GoalView.swift in Sources */,
+				BAF6CE7C2BD81623002E7BDD /* Goal.swift in Sources */,
 				BAF6CE742BD74B5E002E7BDD /* LoginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

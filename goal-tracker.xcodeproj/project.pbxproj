@@ -42,6 +42,7 @@
 		0EEB9C802B9BBC14008857F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EEB9C7F2B9BBC14008857F3 /* GoogleService-Info.plist */; };
 		BAEA1DB02BB9DDBB00D983C9 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA1DAF2BB9DDBB00D983C9 /* TabView.swift */; };
 		BAEA1DB22BB9E35800D983C9 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA1DB12BB9E35800D983C9 /* MessagesView.swift */; };
+		BAF6CE742BD74B5E002E7BDD /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6CE732BD74B5E002E7BDD /* LoginScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		0EEB9C7F2B9BBC14008857F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BAEA1DAF2BB9DDBB00D983C9 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		BAEA1DB12BB9E35800D983C9 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		BAF6CE732BD74B5E002E7BDD /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				0EEB9C382B9B78F1008857F3 /* Preview Content */,
 				BAEA1DAF2BB9DDBB00D983C9 /* TabView.swift */,
 				BAEA1DB12BB9E35800D983C9 /* MessagesView.swift */,
+				BAF6CE732BD74B5E002E7BDD /* LoginScreen.swift */,
 			);
 			path = "goal-tracker";
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				0EEB9C352B9B78EF008857F3 /* ContentView.swift in Sources */,
 				BAEA1DB02BB9DDBB00D983C9 /* TabView.swift in Sources */,
 				0EEB9C332B9B78EF008857F3 /* goal_trackerApp.swift in Sources */,
+				BAF6CE742BD74B5E002E7BDD /* LoginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

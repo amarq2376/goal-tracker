@@ -46,7 +46,7 @@ struct goal_trackerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginScreen()
         }
     }
 }
